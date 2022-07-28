@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>Functionality testing</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>Протестировать функционал ручек для рисования</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Нажать на ручку, открыв весь набор
+2. Выбрать ручку
+3. Нарисовать что-нибудь на канве 
+
+</steps>
+										<expected>Ручка оставит рисунок на канве, соответствующий её типу</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C2</id>
+				<title>Протестировать функционал стирательной резинки</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Выбрать стирательную резинку, кликнув на неё
+2. Попробовать стереть ранее нарисованное изображение</steps>
+										<expected>Изображение стирается</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>Протестировать функционал шаблонов для рисования</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Нажать на шаблоны для рисования и выбрать один из имеющихся
+2. Выбрать одну из ручек
+3. Попробовать нарисовать что-либо на канве</steps>
+										<expected>Рисунок, появляющийся на канве, соответствует шаблону и воспроизводится симметрично</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C4</id>
+				<title>Протестировать функционал цветовой палитры</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Открыть палитру и выбрать интересующий цвет
+2. Выбрать ручку для рисования
+3. Нарисовать что-либо на канве</steps>
+										<expected>Цвет соответствует выбранному</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>Протестировать возможность полной очистки канвы</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Кликнуть на &quot;крестик&quot; в правом верхнем углу экрана
+2. Выбрать &quot;ОК&quot; в появившемся окне</steps>
+										<expected>Убедиться, что изображение полностью стёрто</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>Протестировать возможность изменения яркости цвета</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Кликнуть на значок &quot;палитры&quot; в палитре
+2. Настроить желаемый цвет
+3. Выбрать &quot;Got it&quot;
+4. Нарисовать что-либо на канве</steps>
+										<expected>Убедиться, что цвет соответствует выбранному
+
+</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>Протестировать шэринг</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Нажать на значок &quot;поделиться&quot; и выбрать социальную сеть
+2. Выбрать, куда хочешь отправить изображение и нажать &quot;отправить&quot;</steps>
+										<expected>Рисунок отправлен получателю</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C8</id>
+				<title>Протестировать возможность отката вперёд и назад</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Нарисовать что-либо на канве
+2. Кликнуть на стрелочки &quot;вперёд&quot; и &quot;назад&quot;</steps>
+										<expected>С каждым кликом демонстрируется предыдущий или следующий шаг относительно данного</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C9</id>
+				<title>Протестировать функционал при слабом заряде устройства</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Открыть приложение при слабом заряде устройства
+2. Произвести функциональное тестирование</steps>
+										<expected>Приложение работает без помех
+
+</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C10</id>
+				<title>Протестировать возможность сохранения изображения на девайс</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1. Кликнуть на значок &quot;сохранить&quot;
+2. Выбрать &quot;ОК&quot; в появившемся окне</steps>
+										<expected>Изображение успешно сохранено в галерею. В случае сохранения &quot;чёрного экрана&quot; изображение также окажется в галерее </expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
