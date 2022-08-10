@@ -18,6 +18,7 @@
 																								<references></references>
 																				<custom>
 										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App</preconds>
 										<steps>1. Нажать на ручку, открыв весь набор
 2. Выбрать ручку
 3. Нарисовать что-нибудь на канве 
@@ -36,6 +37,7 @@
 																								<references></references>
 																				<custom>
 										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App, на канве нарисовано изображение</preconds>
 										<steps>1. Выбрать стирательную резинку, кликнув на неё
 2. Попробовать стереть ранее нарисованное изображение</steps>
 										<expected>Изображение стирается</expected>
@@ -51,6 +53,7 @@
 																								<references></references>
 																				<custom>
 										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App</preconds>
 										<steps>1. Нажать на шаблоны для рисования и выбрать один из имеющихся
 2. Выбрать одну из ручек
 3. Попробовать нарисовать что-либо на канве</steps>
@@ -67,6 +70,7 @@
 																								<references></references>
 																				<custom>
 										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App</preconds>
 										<steps>1. Открыть палитру и выбрать интересующий цвет
 2. Выбрать ручку для рисования
 3. Нарисовать что-либо на канве</steps>
@@ -83,6 +87,7 @@
 																								<references></references>
 																				<custom>
 										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App, на канве нарисовано изображение</preconds>
 										<steps>1. Кликнуть на &quot;крестик&quot; в правом верхнем углу экрана
 2. Выбрать &quot;ОК&quot; в появившемся окне</steps>
 										<expected>Убедиться, что изображение полностью стёрто</expected>
@@ -90,7 +95,7 @@
 							</case>
 															<case>
 				<id>C6</id>
-				<title>Протестировать возможность изменения яркости цвета</title>
+				<title>Протестировать возможности палитры</title>
 												<template>Test Case (Text)</template>
 																<type>Functional</type>
 																<priority>Medium</priority>
@@ -98,11 +103,12 @@
 																								<references></references>
 																				<custom>
 										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App</preconds>
 										<steps>1. Кликнуть на значок &quot;палитры&quot; в палитре
-2. Настроить желаемый цвет
+2. Настроить желаемый цвет, прокрутив индикатор (1 строка сверху)
 3. Выбрать &quot;Got it&quot;
 4. Нарисовать что-либо на канве</steps>
-										<expected>Убедиться, что цвет соответствует выбранному
+										<expected>Цвет соответствует выбранному
 
 </expected>
 									</custom>
@@ -111,12 +117,13 @@
 				<id>C7</id>
 				<title>Протестировать шэринг</title>
 												<template>Test Case (Text)</template>
-																<type>Functional</type>
+																<type>Compatibility</type>
 																<priority>Medium</priority>
 																				<estimate></estimate>
 																								<references></references>
 																				<custom>
 										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App, на канве нарисовано изображение</preconds>
 										<steps>1. Нажать на значок &quot;поделиться&quot; и выбрать социальную сеть
 2. Выбрать, куда хочешь отправить изображение и нажать &quot;отправить&quot;</steps>
 										<expected>Рисунок отправлен получателю</expected>
@@ -132,6 +139,8 @@
 																								<references></references>
 																				<custom>
 										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App
+</preconds>
 										<steps>1. Нарисовать что-либо на канве
 2. Кликнуть на стрелочки &quot;вперёд&quot; и &quot;назад&quot;</steps>
 										<expected>С каждым кликом демонстрируется предыдущий или следующий шаг относительно данного</expected>
@@ -158,15 +167,231 @@
 				<id>C10</id>
 				<title>Протестировать возможность сохранения изображения на девайс</title>
 												<template>Test Case (Text)</template>
+																<type>Accessibility</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App, на канве нарисовано изображение
+</preconds>
+										<steps>1. Кликнуть на значок &quot;сохранить&quot;
+2. Выбрать &quot;ОК&quot; в появившемся окне</steps>
+										<expected>Изображение успешно сохранено в галерею. В случае сохранения &quot;чёрного экрана&quot; изображение также окажется в галерее </expected>
+									</custom>
+							</case>
+															<case>
+				<id>C24</id>
+				<title>Протестировать изменение ориентации приложения</title>
+												<template>Test Case (Text)</template>
+																<type>Accessibility</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App, изменение ориентации разрешено
+</preconds>
+										<steps>1.  Изменить ориентацию экрана</steps>
+										<expected>Убедиться, что изменение прошло корректно: функционал работает, кнопки не поехали</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C25</id>
+				<title>Протестировать работу приложения при параллельной работе других приложений</title>
+												<template>Test Case (Text)</template>
 																<type>Functional</type>
 																<priority>Medium</priority>
 																				<estimate></estimate>
 																								<references></references>
 																				<custom>
 										<automation_type><id>0</id><value> None</value></automation_type>
-										<steps>1. Кликнуть на значок &quot;сохранить&quot;
-2. Выбрать &quot;ОК&quot; в появившемся окне</steps>
-										<expected>Изображение успешно сохранено в галерею. В случае сохранения &quot;чёрного экрана&quot; изображение также окажется в галерее </expected>
+										<preconds>Запущено несколько приложений</preconds>
+										<steps>1. Запустить приложение Doddle App
+2. Провести функциональное тестирование</steps>
+										<expected>Приложение работает корректно, отклик не занимает много времени</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C26</id>
+				<title>Инсталляционное тестирование</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Проверить мобильное устройство на соответствие минимальным требованиям и наличие свободной памяти</preconds>
+										<steps>1. Перейти по ссылке https://play.google.com/store/apps/details?id=com.nmmsoft.doddle и нажать &quot;установить&quot;
+2. Дождаться завершения процесса и запустить приложение</steps>
+										<expected>Приложение успешно установлено и корректно открывается</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C27</id>
+				<title>Тестирование обновления приложения</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Появилось обновление для приложения Doddle App</preconds>
+										<steps>1. Открыть Play Store &amp;gt; Мой профиль &amp;gt; Управление приложениями и устройством &amp;gt; Доступны обновления
+2. Найти приложение Doddle App и нажать &quot;обновить&quot; 
+2. Дождаться завершения обновления</steps>
+										<expected>Приложение обновлено</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C28</id>
+				<title>Тестирование удаления приложения</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>На мобильное устройство установлено приложение Doddle App</preconds>
+										<steps>1. Навести палец на приложение и прижать его к экрану
+2. Дождаться поп-апа и выбрать &quot;удалить&quot;
+3. В button sheet выбрать &quot;удалить&quot;</steps>
+										<expected>Приложение успешно удалено</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C29</id>
+				<title>Протестировать возможность изменения яркости цвета</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App</preconds>
+										<steps>1. Выбрать палитру и кликнуть на значок &quot;палитры&quot;
+2. Выбрать желаемый цвет
+3. Настроить минимальную яркость, прокрутив индикатор яркости (2 строка снизу)
+4. Выбрать &quot;Got it&quot;
+5. Нарисовать что-либо на канве
+6. Повторить то же самое для максимального значения яркости</steps>
+										<expected>Настройки яркости соответствуют рисункам на канве</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C31</id>
+				<title>Протестировать работу приложения после блокировки</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App, на канву нанесен рисунок</preconds>
+										<steps>1. Заблокировать экран
+2. Разблокировать экран
+3. Нарисовать что-нибудь</steps>
+										<expected>Первоначальный рисунок остался неизменен, работа приложения после разблокировки корректна</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C32</id>
+				<title>Протестировать работу приложения после прерывания звонком</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App, на канву нанесен рисунок
+</preconds>
+										<steps>1. Ответить на входящий вызов
+2. После сброса вызова вернуться в приложение
+3. Нанести изображение на канву
+4. Повторить то же самое для исходящего вызова</steps>
+										<expected>Первоначальный рисунок остался неизменен, работа приложения после завершения вызова корректна</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C33</id>
+				<title>Протестировать работу приложения при поступившем уведомлении</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App с нанесенным на канву рисунком, поступило уведомление</preconds>
+										<steps>1. Прикрыть уведомление
+2. Продолжить работу с приложением</steps>
+										<expected>Первоначальный рисунок остался неизменен, поступившее уведомление не изменило работу приложения
+</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C34</id>
+				<title>Протестировать работу приложения во время зарядки</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App, на канву нанесен рисунок
+
+</preconds>
+										<steps>1. Подключить телефон для зарядки
+2. Продолжить работу с приложением в течение некоторого времени
+3. Прервать зарядку</steps>
+										<expected>Приложение работает корректно при зарядке, а также во время подключения и отключения от розетки</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C35</id>
+				<title>Протестировать работу приложения при отсутствии интернет соединения</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App
+</preconds>
+										<steps>1. Нажать на ручку, открыв весь набор
+2. Выбрать ручку
+3. Нарисовать что-нибудь на канве
+</steps>
+										<expected>Работа приложения корректна</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C36</id>
+				<title>Протестировать шэринг при отсутствии интернет соединения</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<preconds>Запущено приложение Doddle App, на канву нанесен рисунок
+
+</preconds>
+										<steps>1. Нажать на значок &quot;поделиться&quot; и выбрать социальную сеть
+2. Выбрать, куда хочешь отправить изображение и нажать &quot;отправить&quot;
+</steps>
+										<expected>При возобновлении интернет соединения рисунок отправится получателю
+
+</expected>
 									</custom>
 							</case>
 								</cases>
